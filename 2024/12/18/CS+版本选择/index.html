@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+    <link rel="alternate icon" type="image/png" href="/img/favicon.png">
+    <title>CS+ V4.08 版本的两个坑 - 数字移民</title>
+    
+<link rel="stylesheet" href="/css/reset.css">
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<link rel="stylesheet" href="/css/markdown.css">
+
+    
+<link rel="stylesheet" href="/css/a11y-dark.min.css">
+
+    
+<link rel="stylesheet" href="/css/custom.css">
+
+    <script src="/js/highlight.min.js"></script>
+    <script src="/js/highlightjs-line-numbers.js"></script>
+    <script src="/js/copy-code.js"></script>
+<meta name="generator" content="Hexo 7.3.0"></head>
+    <body>
+        <div class="paper">
+            <div class="paper-main">
+                <div class="post-header">
+    <a class="logo" href="/">数字移民</a>
+</div>
+<div class="post-main">
+
+    
+    
+        <div class="post-main-title">
+            CS+ V4.08 版本的两个坑
+        </div>
+        <div class="post-content-meta">
+            2024-12-18
+        </div>
+        <div class="post-md">
+            <h4 id="问题1"><a href="#问题1" class="headerlink" title="问题1"></a>问题1</h4><p>以芯片型号 R5F100PG 为例，ROM 大小是 128KB，使用 V4.08 版本附带的编译器生成的 MAP 文件中 ROM SIZE &#x3D; 10000H，换算下是 64KB，容量小了一半，使用 V4.07 及以下版本正常，ROM SIZE &#x3D; 20000H。</p>
+<h4 id="问题2"><a href="#问题2" class="headerlink" title="问题2"></a>问题2</h4><p>V4.08 版本 debug 时定时器不准，现象是 1 分钟定时，掐表看是 1 分零 4 秒，可能是主频偏差，没仔细查，V4.07 以下版本正常。</p>
+
+        </div>
+        
+        
+            <div class="post-content-meta tags">
+                <div class="emo">#</div>
+                <div>
+                    
+                        <a href="/tags/MCU/">MCU</a>
+                    
+                </div>
+            </div>
+        
+
+    
+
+</div>
+<div class="post-header">
+    <a class="go-home" href="javascript:history.back()">
+        <svg width="8" height="14" viewBox="0 0 8 14">
+            <path d="M7 1L1 7l6 6" stroke="#000" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </a>
+</div>
+
+                <div class="footer">
+    <span id="copyright-year">Copyright © <span id="year"></span> 数字移民</span>
+    <script type="text/javascript">
+     document.addEventListener('DOMContentLoaded', function() {
+      var yearElement = document.getElementById('year');
+      if (yearElement) {
+        var currentYear = new Date().getFullYear();
+        yearElement.textContent = currentYear;
+      }
+    });
+    
+    window.addEventListener('touchstart', function(event) {
+    // 处理 touchstart 事件的逻辑
+    // 如果不需要调用 event.preventDefault()，可以将事件处理程序标记为 'passive'
+     }, { passive: true });
+   </script>
+
+</div>
+
+
+            </div>
+        </div>
+    </body>
+</html>
