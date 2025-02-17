@@ -45,6 +45,26 @@
 <div class="post-list">
     
     <div class="post ">
+        <a class="post-title" href="/2025/02/17/STM32F103%E8%AE%BE%E7%BD%AEPB4%E4%B8%BA%E6%99%AE%E9%80%9AGPIO/">避坑！STM32F1 这 3 个 IO 需要特殊设置！</a>
+        <div class="post-except">
+            有个项目需要使用 PB3、PB4 作为普通 GPIO，但是配置后不生效，查资料发现是 PB3、PB4 引脚在复位后的默认配置为 JTAG 功能，如果想要设置成普通 GPIO 口功能，需要在配置的时候关闭引脚的 JTAG 功能，让其可以充当普通 GPIO 口来使用。
+GPIO_InitTypeDef GPIO_InitStructure;RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA | RCC_APB2Periph_GPIOB | RC
+            <a class="read-more" href="/2025/02/17/STM32F103%E8%AE%BE%E7%BD%AEPB4%E4%B8%BA%E6%99%AE%E9%80%9AGPIO/"> ...... </a>
+        </div>
+        <div class="post-meta">
+            <div class="post-date">2025.02.17</div>
+            
+                <div class="post-tags">
+                    <span class="tag-emoji">#</span>
+                    
+                        <a href="/tags/MCU/" class="post-tag">MCU</a>
+                    
+                </div>
+            
+        </div>
+    </div>
+    
+    <div class="post ">
         <a class="post-title" href="/2024/12/26/TM1638%E9%A9%B1%E5%8A%A8%E6%95%B0%E7%A0%81%E7%AE%A1%E5%92%8C%E8%8E%B7%E5%8F%96%E6%8C%89%E9%94%AE/">TM1638 驱动数码管和获取按键</a>
         <div class="post-except">
             
