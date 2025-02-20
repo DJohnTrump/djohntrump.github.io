@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
     <link rel="alternate icon" type="image/png" href="/img/favicon.png">
-    <title>数字移民</title>
+    <title>避坑！使用 STM32F4 的 DMA 时需要这样设置！ - 数字移民</title>
     
 <link rel="stylesheet" href="/css/reset.css">
 
@@ -27,65 +27,46 @@
     <body>
         <div class="paper">
             <div class="paper-main">
-                <div class="header">
+                <div class="post-header">
     <a class="logo" href="/">数字移民</a>
-    <ul class="nav">
-        
-        <li><a href="/">首页</a></li>
-        
-        <li><a href="/archives">归档</a></li>
-        
-        <li><a href="/page">标签</a></li>
-        
-        <li><a href="/about">关于</a></li>
-        
-    </ul>
 </div>
-<div class="archive-list">
-  
-  
-    <div class="tags-post">#MCU</div>
-  
-  
-      <h2>2025</h2>
-      <ul class="archive">
-    
-    <li>
-      <div class="archive-main">
-        <a class="archive-title" href="/2025/02/20/STM32-DMA/">避坑！使用 STM32F4 的 DMA 时需要这样设置！</a>
-      </div>
-      <span class="archive-date">2025.02.20</span>
-    </li>
-  
-    <li>
-      <div class="archive-main">
-        <a class="archive-title" href="/2025/02/17/STM32F103%E8%AE%BE%E7%BD%AEPB4%E4%B8%BA%E6%99%AE%E9%80%9AGPIO/">避坑！STM32F1 这 3 个 IO 需要特殊设置！</a>
-      </div>
-      <span class="archive-date">2025.02.17</span>
-    </li>
-  
-        </ul>
-      
-      <h2>2024</h2>
-      <ul class="archive">
-    
-    <li>
-      <div class="archive-main">
-        <a class="archive-title" href="/2024/12/26/TM1638%E9%A9%B1%E5%8A%A8%E6%95%B0%E7%A0%81%E7%AE%A1%E5%92%8C%E8%8E%B7%E5%8F%96%E6%8C%89%E9%94%AE/">TM1638 驱动数码管和获取按键</a>
-      </div>
-      <span class="archive-date">2024.12.26</span>
-    </li>
-  
-    <li>
-      <div class="archive-main">
-        <a class="archive-title" href="/2024/12/18/CS+%E7%89%88%E6%9C%AC%E9%80%89%E6%8B%A9/">CS+ V4.08 版本的两个坑</a>
-      </div>
-      <span class="archive-date">2024.12.18</span>
-    </li>
-  
-  </ul>
-</div>
+<div class="post-main">
 
+    
+    
+        <div class="post-main-title">
+            避坑！使用 STM32F4 的 DMA 时需要这样设置！
+        </div>
+        <div class="post-content-meta">
+            2025-02-20
+        </div>
+        <div class="post-md">
+            <p>最近有个项目使用 STM32F407 USART1 串口发送数据，借助 DMA 方式，发现一个问题：需要检测发送完成标志位后清除标志位后才能再次发送，而之前使用 STM32F103 却不需要清标志位的操作，清除标志位的示例代码如下：</p>
+<p>if (DMA_GetFlagStatus(DMA2_Stream7, DMA_FLAG_TCIF7) !&#x3D; RESET) {<br>    DMA_ClearFlag(DMA2_Stream7, DMA_FLAG_TCIF7);<br>}</p>
+
+        </div>
+        
+        
+            <div class="post-content-meta tags">
+                <div class="emo">#</div>
+                <div>
+                    
+                        <a href="/tags/MCU/">MCU</a>
+                    
+                </div>
+            </div>
+        
+
+    
+
+</div>
+<div class="post-header">
+    <a class="go-home" href="javascript:history.back()">
+        <svg width="8" height="14" viewBox="0 0 8 14">
+            <path d="M7 1L1 7l6 6" stroke="#000" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </a>
+</div>
 
                 <div class="footer">
     <span id="copyright-year">Copyright © <span id="year"></span> 数字移民</span>

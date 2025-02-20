@@ -45,6 +45,27 @@
 <div class="post-list">
     
     <div class="post ">
+        <a class="post-title" href="/2025/02/20/STM32-DMA/">避坑！使用 STM32F4 的 DMA 时需要这样设置！</a>
+        <div class="post-except">
+            最近有个项目使用 STM32F407 USART1 串口发送数据，借助 DMA 方式，发现一个问题：需要检测发送完成标志位后清除标志位后才能再次发送，而之前使用 STM32F103 却不需要清标志位的操作，清除标志位的示例代码如下：
+if (DMA_GetFlagStatus(DMA2_Stream7, DMA_FLAG_TCIF7) !&#x3D; RESET) {    DMA_ClearFlag(DMA2_Stream7, DMA_FLAG_TCIF7);}
+
+            <a class="read-more" href="/2025/02/20/STM32-DMA/"> ...... </a>
+        </div>
+        <div class="post-meta">
+            <div class="post-date">2025.02.20</div>
+            
+                <div class="post-tags">
+                    <span class="tag-emoji">#</span>
+                    
+                        <a href="/tags/MCU/" class="post-tag">MCU</a>
+                    
+                </div>
+            
+        </div>
+    </div>
+    
+    <div class="post ">
         <a class="post-title" href="/2025/02/17/STM32F103%E8%AE%BE%E7%BD%AEPB4%E4%B8%BA%E6%99%AE%E9%80%9AGPIO/">避坑！STM32F1 这 3 个 IO 需要特殊设置！</a>
         <div class="post-except">
             有个项目需要使用 PB3、PB4 作为普通 GPIO，但是配置后不生效，查资料发现是 PB3、PB4 引脚在复位后的默认配置为 JTAG 功能，如果想要设置成普通 GPIO 口功能，需要在配置的时候关闭引脚的 JTAG 功能，让其可以充当普通 GPIO 口来使用。
