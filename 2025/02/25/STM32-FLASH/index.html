@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
     <link rel="alternate icon" type="image/png" href="/img/favicon.png">
-    <title>数字移民</title>
+    <title>避坑！STM32 的 FLASH 容量问题！ - 数字移民</title>
     
 <link rel="stylesheet" href="/css/reset.css">
 
@@ -27,51 +27,45 @@
     <body>
         <div class="paper">
             <div class="paper-main">
-                <div class="header">
+                <div class="post-header">
     <a class="logo" href="/">数字移民</a>
-    <ul class="nav">
-        
-        <li><a href="/">首页</a></li>
-        
-        <li><a href="/archives">归档</a></li>
-        
-        <li><a href="/page">标签</a></li>
-        
-        <li><a href="/about">关于</a></li>
-        
-    </ul>
 </div>
-<div class="archive-list">
-  
-  
-  
-      <h2>2025</h2>
-      <ul class="archive">
-    
-    <li>
-      <div class="archive-main">
-        <a class="archive-title" href="/2025/02/25/STM32-FLASH/">避坑！STM32 的 FLASH 容量问题！</a>
-      </div>
-      <span class="archive-date">2025.02.25</span>
-    </li>
-  
-    <li>
-      <div class="archive-main">
-        <a class="archive-title" href="/2025/02/20/STM32-DMA/">避坑！使用 STM32F4 的 DMA 时需要这样设置！</a>
-      </div>
-      <span class="archive-date">2025.02.20</span>
-    </li>
-  
-    <li>
-      <div class="archive-main">
-        <a class="archive-title" href="/2025/02/17/STM32F103%E8%AE%BE%E7%BD%AEPB4%E4%B8%BA%E6%99%AE%E9%80%9AGPIO/">避坑！STM32F1 这 3 个 IO 需要特殊设置！</a>
-      </div>
-      <span class="archive-date">2025.02.17</span>
-    </li>
-  
-  </ul>
-</div>
+<div class="post-main">
 
+    
+    
+        <div class="post-main-title">
+            避坑！STM32 的 FLASH 容量问题！
+        </div>
+        <div class="post-content-meta">
+            2025-02-25
+        </div>
+        <div class="post-md">
+            <p>根据数据手册可得知，STM32F103RCT6 是大容量产品，FLASH 为 256K，地址范围为 0x08000000 - 0x0803FFFF。有个项目在 FLASH 地址分别是 0x0804000 和 0x08060000 读写数据，但是读写均正常。看到<a target="_blank" rel="noopener" href="https://www.stmcu.org.cn/module/forum/forum.php?mod=viewthread&tid=607566">有人讨论</a>，ST 芯片的实际容量会比标定容量大一点，但多出来的空间不保证质量，需要注意这个地方。</p>
+
+        </div>
+        
+        
+            <div class="post-content-meta tags">
+                <div class="emo">#</div>
+                <div>
+                    
+                        <a href="/tags/MCU/">MCU</a>
+                    
+                </div>
+            </div>
+        
+
+    
+
+</div>
+<div class="post-header">
+    <a class="go-home" href="javascript:history.back()">
+        <svg width="8" height="14" viewBox="0 0 8 14">
+            <path d="M7 1L1 7l6 6" stroke="#000" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </a>
+</div>
 
                 <div class="footer">
     <span id="copyright-year">Copyright © <span id="year"></span> 数字移民</span>

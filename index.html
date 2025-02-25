@@ -45,6 +45,26 @@
 <div class="post-list">
     
     <div class="post ">
+        <a class="post-title" href="/2025/02/25/STM32-FLASH/">避坑！STM32 的 FLASH 容量问题！</a>
+        <div class="post-except">
+            根据数据手册可得知，STM32F103RCT6 是大容量产品，FLASH 为 256K，地址范围为 0x08000000 - 0x0803FFFF。有个项目在 FLASH 地址分别是 0x0804000 和 0x08060000 读写数据，但是读写均正常。看到有人讨论，ST 芯片的实际容量会比标定容量大一点，但多出来的空间不保证质量，需要注意这个地方。
+
+            <a class="read-more" href="/2025/02/25/STM32-FLASH/"> ...... </a>
+        </div>
+        <div class="post-meta">
+            <div class="post-date">2025.02.25</div>
+            
+                <div class="post-tags">
+                    <span class="tag-emoji">#</span>
+                    
+                        <a href="/tags/MCU/" class="post-tag">MCU</a>
+                    
+                </div>
+            
+        </div>
+    </div>
+    
+    <div class="post ">
         <a class="post-title" href="/2025/02/20/STM32-DMA/">避坑！使用 STM32F4 的 DMA 时需要这样设置！</a>
         <div class="post-except">
             最近有个项目使用 STM32F407 USART1 串口发送数据，借助 DMA 方式，发现一个问题：需要检测发送完成标志位后清除标志位后才能再次发送，而之前使用 STM32F103 却不需要清标志位的操作，清除标志位的示例代码如下：
