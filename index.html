@@ -45,6 +45,26 @@
 <div class="post-list">
     
     <div class="post ">
+        <a class="post-title" href="/2025/02/28/c-least-squares/">用 C 语言实现最小二乘法算法</a>
+        <div class="post-except">
+            有些嵌入式系统的 IDE 不支持结构体，所以改了一个通俗易懂版本。
+#include &lt;stdio.h&gt;#define LEN 100float DataInX[LEN];float DataInY[LEN];unsigned char GucDataLength;void push(float x, float y) {    int i &#x3D; 0;    if (GucDataLength &lt; LEN) {        DataInX[GucD
+            <a class="read-more" href="/2025/02/28/c-least-squares/"> ...... </a>
+        </div>
+        <div class="post-meta">
+            <div class="post-date">2025.02.28</div>
+            
+                <div class="post-tags">
+                    <span class="tag-emoji">#</span>
+                    
+                        <a href="/tags/MCU/" class="post-tag">MCU</a>
+                    
+                </div>
+            
+        </div>
+    </div>
+    
+    <div class="post ">
         <a class="post-title" href="/2025/02/26/mcu-debug/">复位 MCU 直接调试运行程序，让 bug 闻风丧胆~</a>
         <div class="post-except">
             查看原文
@@ -215,31 +235,6 @@ GPIO_InitTypeDef GPIO_InitStructure;RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA 
         </div>
         <div class="post-meta">
             <div class="post-date">2024.09.03</div>
-            
-                <div class="post-tags">
-                    <span class="tag-emoji">#</span>
-                    
-                        <a href="/tags/Windows/" class="post-tag">Windows</a>
-                    
-                </div>
-            
-        </div>
-    </div>
-    
-    <div class="post ">
-        <a class="post-title" href="/2024/07/13/new-windows/">Windows 11 全新开机设置流程</a>
-        <div class="post-except">
-            1. 跳过开机联网激活
-首先进入需要联网的界面，按下键盘上的 Shift + F10；
-按下后会打开命令提示符，在其中输入 oobe\bypassnro 后回车；
-使用上述命令后会重新启动，再进入联网界面后可以发现，右下角多了一个「我没有 Internet 连接」；
-点击它之后进入下图界面，再点击「继续执行受限设置」，就可以跳过联网激活，进行后续的设置。
-
-2. 卸载自带软件卸载 Xbox：终端管理员中输入 Get-AppxPackage Microsoft.XboxGami
-            <a class="read-more" href="/2024/07/13/new-windows/"> ...... </a>
-        </div>
-        <div class="post-meta">
-            <div class="post-date">2024.07.13</div>
             
                 <div class="post-tags">
                     <span class="tag-emoji">#</span>
